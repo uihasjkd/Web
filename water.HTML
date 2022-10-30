@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>水滴</title>
+    <style>
+        *{
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;   
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            background-color: rgb(34, 106, 239);
+        }
+        #water{
+            margin-top: 200px;
+            width: 200px;
+            height:200px;
+            border-radius: 59% 41% 63% 37% / 22% 26% 74% 78%;
+            box-shadow: inset 10px 20px 30px rgba(0,0,0,0.5),
+                              10px 20px 20px rgba(0,0,0,0.3),
+                              15px 15px 30px rgba(0,0,0,0.05),
+                        inset -10px -10px 15px rgba(255,255,255,0.8);
+                        animation: action 2s linear infinite alternate;
+            
+            
+        }
+        #water::after{
+            content: "";
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 240px;
+            left: 48%;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 50% 50% 50% 50% / 54% 63% 37% 46%;
+            animation: action 2s linear infinite alternate;
+        }
+        #water::before{
+            content: "";
+            width: 10px;
+            height: 10px;
+            position: absolute;
+            top: 265px;
+            left: 47%;
+            background-color: rgba(255,255,255,0.8);
+            border-radius: 42% 58% 63% 37% / 63% 71% 29% 37%;
+        }
+        
+
+        @keyframes action {
+            25%{
+                border-radius: 30% 70% 44% 56% / 42% 26% 74% 58%;
+            }
+            50%{
+                border-radius: 30% 50% 21% 79% / 42% 26% 38% 47%;
+            }
+            100%{
+                border-radius: 30% 35% 51% 49% / 33% 40% 30% 67%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="water">
+
+    </div>
+</body>
+</html>
